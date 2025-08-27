@@ -1,3 +1,22 @@
+# ============================================================================================
+# GitHub Actions Workflow: Build and Push Docker Image to GitHub Container Registry (GHCR)
+#
+# This workflow automatically builds a Docker image from the repository source and pushes it
+# to GitHub Container Registry (ghcr.io) upon every push to the `main` branch.
+#
+# Workflow Steps:
+#   1. Checkout repository source code.
+#   2. Log in to GHCR using GitHub credentials.
+#   3. Extract Docker image metadata (tags, labels).
+#   4. Build and push the Docker image to GHCR.
+#
+# Required permissions:
+#   - contents: read
+#   - packages: write
+#
+# For details, see: https://github.com/docker/build-push-action
+# ============================================================================================
+
 name: Build and Push Docker Image
 
 on:
